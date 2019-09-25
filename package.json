@@ -1,5 +1,5 @@
 {
-    "name": "foundry",
+    "name": "element-foundry",
     "version": "0.0.1",
     "description": "Foundry is a scaffolding tool for element studios frameworks.",
     "main": "index.js",
