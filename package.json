@@ -1,6 +1,6 @@
 {
     "name": "foundry-scaffold",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Foundry is a scaffolding tool for element studios frameworks.",
     "main": "index.js",
     "scripts": {
