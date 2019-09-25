@@ -1,13 +1,15 @@
 {
     "name": "foundry-scaffold",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Foundry is a scaffolding tool for element studios frameworks.",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" "
+        "test": "echo \"Error: no test specified\" ",
+        "scaffold": "foundry-css"
     },
     "bin": {
-        "foundry": "./bin/index.js"
+        "foundry-css": "./bin/index.js",
+        "foundry-test": "./bin/index.js"
     },
     "repository": {
         "type": "git",

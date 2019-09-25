@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const program = require('commander');
 
 program
@@ -8,7 +10,7 @@ program
     .parse(process.argv);
 
 const temporarydir = 'tmp'; // This is for the git repository download.
-const outputDir = program.path || 'src/scss';
+const outputDir = program.path || './src';
 const css = !!program.css;
 const react = !!program.react;
 
@@ -16,9 +18,14 @@ const foundryCssScaffold = require('../src/foundry-css');
 const foundryReactScaffold = require('../src/foundry-react');
 
 if (css) {
-    foundryCssScaffold(temporarydir, outputDir);
+    foundryCssScaffold(temporarydir, outputDir + '/scss');
 }
 
 if (react) {
-    foundryReactScaffold(temporarydir, outputDir);
+    foundryReactScaffold(temporarydir, outputDir + '/react');
+}
+
+if (!css && !react) {
+    foundryCssScaffold(temporarydir, outputDir + '/scss');
+    foundryReactScaffold(temporarydir, outputDir + '/react');
 }
